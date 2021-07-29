@@ -10,7 +10,7 @@
     </div>
 
     <div class="text-center">
-        <img src="<?= base_url('assets/'); ?>img/think.svg" style="max-height: 90px">
+        <img src="<?= base_url(''); ?>assets/img/think.svg" style="max-height: 90px">
         <h4 class="pt-3">save your <b>imagination</b> On Blank Canvas!</h4>
     </div>
 

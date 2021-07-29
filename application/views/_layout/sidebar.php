@@ -2,7 +2,7 @@
 <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
-            <img src="<?= base_url('assets/'); ?>img/logo/logo2.png">
+            <img src="<?= base_url(); ?>assets/img/logo/logo2.png">
         </div>
         <div class="sidebar-brand-text mx-3">Ruang Admin</div>
     </a>
@@ -16,6 +16,23 @@
     <div class="sidebar-heading">
         Features
     </div>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMaster" aria-expanded="true" aria-controls="collapseMaster">
+            <i class="far fa-fw fa-window-maximize"></i>
+            <span>Master</span>
+        </a>
+        <div id="collapseMaster" class="collapse" aria-labelledby="headingMaster" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Master</h6>
+                <a class="collapse-item" href="<?= base_url('perusahaan'); ?>">Perusahaan</a>
+                <a class="collapse-item" href="<?= base_url('element/button'); ?>">Buttons</a>
+                <a class="collapse-item" href="<?= base_url('element/dropdown'); ?>">Dropdowns</a>
+                <a class="collapse-item" href="<?= base_url('element/modal'); ?>">Modals</a>
+                <a class="collapse-item" href="<?= base_url('element/popovers'); ?>">Popovers</a>
+                <a class="collapse-item" href="<?= base_url('element/progressbar'); ?>">Progress Bars</a>
+            </div>
+        </div>
+    </li>
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap" aria-expanded="true" aria-controls="collapseBootstrap">
             <i class="far fa-fw fa-window-maximize"></i>
