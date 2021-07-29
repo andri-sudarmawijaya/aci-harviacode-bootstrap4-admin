@@ -1,17 +1,13 @@
-<!doctype html>
-<html>
-    <head>
-        <title>harviacode.com - codeigniter crud generator</title>
-        <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
-        <style>
-            body{
-                padding: 15px;
-            }
-        </style>
-    </head>
-    <body>
-        <h2 style="margin-top:0px">Perusahaan <?php echo $button ?></h2>
-        <form action="<?php echo $action; ?>" method="post">
+<!-- Container Fluid-->
+<div class="container-fluid" id="container-wrapper">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800"><?php echo $title; ?></h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><?php echo $title; ?></li>
+        </ol>
+    </div>
+    <form action="<?php echo $action; ?>" method="post">
 	    <div class="form-group">
             <label for="varchar">Nama Perusahaan <?php echo form_error('nama_perusahaan') ?></label>
             <input type="text" class="form-control" name="nama_perusahaan" id="nama_perusahaan" placeholder="Nama Perusahaan" value="<?php echo $nama_perusahaan; ?>" />
@@ -28,5 +24,6 @@
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
 	    <a href="<?php echo site_url('perusahaan') ?>" class="btn btn-default">Cancel</a>
 	</form>
-    </body>
-</html>
+
+</div>
+<!---Container Fluid-->
