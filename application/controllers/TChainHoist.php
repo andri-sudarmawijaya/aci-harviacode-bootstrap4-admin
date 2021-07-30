@@ -16,7 +16,7 @@ class TChainHoist extends CI_Controller
     public function index()
     {
         $data['title'] = 'Daftar Laporan Chain Hoist';
-        $data['last_update'] = date('D/M/Y', time());
+        $data['last_update'] = date('D d/M/Y', time());
         $this->load->view('tchainhoist/TChainHoist_list', $data);
     } 
     
