@@ -16,7 +16,6 @@ $lang['error_loggedin_role_id_not_found'] = 'User Role ID not found';
 $lang['error_updating_user_account'] = 'Unable to update user account data';
 $lang['error_user_delete_yourself'] = 'You can not delete your own account';
 $lang['error_admin_delete_superadmin'] = 'You are not authorized to delete this type of user.';
-$lang['error_admin_unable_send_mail'] = 'Unable to send mail! Check logs for more info.';
 
 // Register
 $lang['register_identity_unavailable'] = 'Identity already used or invalid';
@@ -61,10 +60,10 @@ $lang['login_error_email_unverified'] = 'Before proceeding, please check your em
 //Roles
 $lang['roles_error_unable_create'] = 'Unable to create new Role';
 $lang['roles_error_unable_update'] = 'Unable to update Role';
-$lang['roles_error_unable_delete'] = 'Unable to delete Role';
+$lang['roles_error_unable_delete'] = 'Unable to update Role';
 $lang['roles_error_notallowed_delete'] = 'Can\'t delete the administrators\' group';
 
 //Modules
 $lang['modules_error_unable_create'] = 'Unable to create new Module';
 $lang['modules_error_unable_update'] = 'Unable to update Module';
-$lang['modules_error_unable_delete'] = 'Unable to delete Module';
+$lang['modules_error_unable_delete'] = 'Unable to update Module';

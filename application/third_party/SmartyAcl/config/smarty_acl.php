@@ -101,7 +101,7 @@ $config['identity'] = 'username';
  | @param bool FALSE(identity only)
  | @param string column_name(identity or column_name)
  | -------------------------------------------------------------------------
- | Allows login using only the identity or email as optional.
+ | Allows login using only the identity or other column as optional.
  | Eg: Login with username or email on same field
  | Default: FALSE
  */
@@ -121,12 +121,12 @@ $config['default_role'] = 2;
  | Default route name for unauthorized access
  | Default:
  */
-$config['unauthorized_route'] = 'unauthorized';
+$config['unauthorized_route'] = 'admin/unauthorized';
 /*
  | -------------------------------------------------------------------------
  | Error and Messages Delimiters
  | -------------------------------------------------------------------------
- | ''(empty) or html element. <p>, <span>, <li>, etc
+ | ''(empty) or html element
  */
 $config['message_start_delimiter'] = ''; // Message start delimiter
 $config['message_end_delimiter']   = ''; // Message end delimiter
@@ -143,14 +143,14 @@ $config['password_algo'] = PASSWORD_BCRYPT;
  | Forgot Password Expiration
  | -------------------------------------------------------------------------
  | The number of seconds after which a forgot password request will expire. If set to 0, forgot password requests will not expire.
- | Default: 1800 (30 min)
+ | Default: 1800
  */
 $config['forgot_password_expiration'] = 1800;
 /*
  | -------------------------------------------------------------------------
  | Min Password Length
  | -------------------------------------------------------------------------
- | Minimum Required Length of Password (not enforced by lib, use this with form validation)
+ | Minimum Required Length of Password (not enforced by lib - see note above)
  | Default: 6
  */
 $config['min_password_length'] = 6;
@@ -167,7 +167,7 @@ $config['maximum_login_attempts'] = 3;
  | Login Lockout Time
  | -------------------------------------------------------------------------
  | The number of seconds to lockout an account due to exceeded attempts. You should not use a value below 60 (1 minute)
- | Default: 600 (10 min)
+ | Default: 600
 */
 $config['lockout_time'] = 600;
 /*
@@ -175,9 +175,9 @@ $config['lockout_time'] = 600;
  | Session Expiration Time
  | -------------------------------------------------------------------------
  | How long to remember the user (seconds). Set to zero for no expiration - see sess_expiration in CodeIgniter Session config for session expiration
- | Default: 86400 (24 hours)
+ | Default: 86500
 */
-$config['session_expire'] = 86400;
+$config['session_expire'] = 86500;
 /*
  | -------------------------------------------------------------------------
  | Session Recheck Time
@@ -199,7 +199,7 @@ $config['remember_cookie_name'] = 'remember';
  | Session Prefix Name
  | -------------------------------------------------------------------------
  | Admin session prefix name
- | Default: 'login' Return: login_admin_(hash) for admin users / login_user_(hash) for users
+ | Default: 'login' Return: login_admin_(hash) for admin users / login_user_(hash) for common users
 */
 $config['session_name'] = 'login';
 /*

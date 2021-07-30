@@ -49,6 +49,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'admin';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['account'] = 'Welcome/account';
+$route['importdatabase'] = 'Welcome/importdatabase';
+//AUTH ROUTES
+$route['login'] = 'Auth/login';
+$route['logout'] = 'Auth/logout';
+$route['register'] = 'Auth/register';
+$route['activate/(:num)/(:any)'] = 'Auth/activate/$1/$2';
+$route['resend_activation'] = 'Auth/resend_activation';
+$route['forgot_password'] = 'Auth/forgot_password';
+$route['reset_password/(:any)'] = 'Auth/reset_password/$1';
+/*
+ * --------------------------------------------------------
+ * ADMIN ROUTES
+ * --------------------------------------------------------
+ */
+//AUTH ROUTES
+$route['admin/login'] = 'AuthAdmin/index';
+$route['admin/logout'] = 'AuthAdmin/logout';
+$route['admin/register'] = 'AuthAdmin/register';
+$route['admin/activate/(:num)/(:any)'] = 'AuthAdmin/activate/$1/$2';
+$route['admin/resend_activation'] = 'AuthAdmin/resend_activation';
+$route['admin/forgot_password'] = 'AuthAdmin/forgot_password';
+$route['admin/reset_password/(:any)'] = 'AuthAdmin/reset_password/$1';
+
+$route['admin'] = 'Admin/index';
+//Roles
+$route['admin/roles'] = 'Admin/roles';
+$route['admin/roles/create'] = 'Admin/role_create';
+$route['admin/roles/edit/(:num)'] = 'Admin/role_edit/$1';
+$route['admin/roles/delete/(:num)'] = 'Admin/role_delete/$1';
+//Modules
+$route['admin/modules'] = 'Admin/modules';
+$route['admin/modules/create'] = 'Admin/module_create';
+$route['admin/modules/edit/(:num)'] = 'Admin/module_edit/$1';
+$route['admin/modules/delete/(:num)'] = 'Admin/module_delete/$1';
+//Users
+$route['admin/users'] = 'Admin/users';
+$route['admin/users/create'] = 'Admin/user_create';
+$route['admin/users/edit/(:num)'] = 'Admin/user_edit/$1';
+$route['admin/users/delete/(:num)'] = 'Admin/user_delete/$1';
+//Admins
+$route['admin/admins'] = 'Admin/admins';
+$route['admin/admins/create'] = 'Admin/admin_create';
+$route['admin/admins/edit/(:num)'] = 'Admin/admin_edit/$1';
+$route['admin/admins/delete/(:num)'] = 'Admin/admin_delete/$1';
+//Unauthorized
+$route['admin/unauthorized'] = 'Welcome/unauthorized';
